@@ -10,18 +10,18 @@ jobs:
   unit-test:
     runs-on: ubuntu-latest
     steps: 
-      - name: Checkout and Setup Node
-        uses: ./.github/actions/checkkout-and-setup
-      - run: npm test --coverage
-      # - uses: actions/checkout@v3
-      #   name: Checkout Respository 🤙🏻
-      # - name: Setup Node
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 18
-      #     cache: 'npm'
-      # - run: npm ci
-      # - run: npm test
+      # - name: Checkout and Setup Node
+      #   uses: ./.github/actions/checkkout-and-setup
+      # - run: npm test --coverage
+      - uses: actions/checkout@v3
+        name: Checkout Respository 🤙🏻
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
   build:
     runs-on: ubuntu-latest
     steps:
