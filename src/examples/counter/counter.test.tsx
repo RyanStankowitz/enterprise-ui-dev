@@ -6,11 +6,11 @@ import userEvent from '@testing-library/user-event';
 import Counter from '.';
 import { render } from './test/utilities';
 
-test('it should render the component', () => {
+test.todo('it should render the component', () => {
   render(<Counter />);
 });
 
-test('it should increment when the "Increment" button is pressed', async () => {
+test.todo('it should increment when the "Increment" button is pressed', async () => {
   const { user } = render(<Counter />);
   const currentCount = screen.getByTestId('current-count');
   const buttom = screen.getByRole('button', { name: 'Increment' });

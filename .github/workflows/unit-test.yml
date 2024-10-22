@@ -10,9 +10,6 @@ jobs:
   unit-test:
     runs-on: ubuntu-latest
     steps: 
-      # - name: Checkout and Setup Node
-      #   uses: ./.github/actions/checkkout-and-setup
-      # - run: npm test --coverage
       - uses: actions/checkout@v3
         name: Checkout Respository 🤙🏻
       - name: Setup Node

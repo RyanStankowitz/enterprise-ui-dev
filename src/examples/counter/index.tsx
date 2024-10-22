@@ -5,7 +5,7 @@ type CounterProps = {
   initialCount?: number;
 };
 
-const Counter = ({ initialCount = 0 }: CounterProps) => {
+const Counter = ({ initialCount = 1 }: CounterProps) => {
   const [count, setCount] = useState(initialCount);
 
   return (
